@@ -1,0 +1,9 @@
+{
+  "key.category.spotifyoverlay.main": "Spotify Overlay",
+  "key.spotifyoverlay.open": "Overlay bearbeiten / Login",
+  "key.spotifyoverlay.pp": "Play / Pause",
+  "key.spotifyoverlay.next": "Naechster Song",
+  "key.spotifyoverlay.prev": "Vorheriger Song",
+  "key.spotifyoverlay.vup": "Lauter",
+  "key.spotifyoverlay.vdn": "Leiser"
+}

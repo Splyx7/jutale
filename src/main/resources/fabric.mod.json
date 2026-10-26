@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "spotifyoverlay",
+  "version": "1.0.0",
+  "name": "Spotify Glass Overlay",
+  "description": "Spotify HUD im Glass-Design mit Schallplatte",
+  "environment": "client",
+  "entrypoints": { "client": ["dev.spotifyoverlay.SpotifyOverlayMod"] },
+  "depends": { "fabricloader": ">=0.18.0", "minecraft": "1.21.11", "java": ">=21", "fabric-api": "*" }
+}
