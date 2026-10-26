@@ -1,0 +1,36 @@
+name: Build
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Java 21 einrichten
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Gradle einrichten
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: current
+
+      - name: Mod bauen
+        run: gradle build --no-daemon
+
+      - name: Jar hochladen
+        uses: actions/upload-artifact@v4
+        with:
+          name: spotifyoverlay
+          path: |
+            build/libs/*.jar
+            !build/libs/*-sources.jar
